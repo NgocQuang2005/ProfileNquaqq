@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --bgColor: #4fe7d7;
+  --pink: #f2726a;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins";
+  background-image: url(./../images/backgorund.png);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(to right, #4fe7d7, #f2726a);
+  padding: 60px 20px;
+  margin: 20px 15px;
+  border-radius: 20px;
+}
+.user img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border-right: 5px solid #4fe7d7;
+  border-left: 5px solid #cb7a18;
+  border-bottom: 5px solid #de8c9c;
+  border-top: 5px solid #0939d6;
+}
+.user__fullname {
+  font-size: 26px;
+  padding: 20px;
+  font-weight: 700;
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .user__fullname {
+    /* transparent la trong suot */
+    color: transparent;
+    background: linear-gradient(to right, #cf7c7c, #1a70e0);
+    /* tuong thich trinh duyet */
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+.user .dev {
+  color: transparent;
+  background: linear-gradient(to right, #de0f0f, #1a59e0);
+  /* tuong thich trinh duyet */
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 18px;
+  font-weight: bold;
+}
+.about {
+  font-size: 30px;
+  padding: 20px;
+  font-weight: bold;
+}
+.skill {
+  padding: 20px;
+  margin: 20px 15px;
+  background: linear-gradient(to right, #be6161, #ccc);
+  display: flex;
+  /* align-items:center; */
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+.skill__title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+}
+.skill__me {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.skill__me--language {
+  background-color: #333333;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.skill__me--language:hover {
+  transform: scale(1.05);
+}
+.skill__me--language ion-icon {
+  margin-right: 7px;
+  font-size: 32px;
+  color: #2fa4e2;
+}
+.experience {
+  padding: 20px;
+}
+.experience__title {
+  font-size: 27px;
+  font-weight: bold;
+  padding: 20px;
+}
+.experience__time {
+  background: linear-gradient(to bottom, #e29494, #0939d6);
+  height: 100%;
+  padding: 25px;
+  border-radius: 20px;
+  line-height: 22px;
+}
+.experience__time--project {
+  margin-bottom: 15px;
+}
+.project__name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2a231f;
+  text-transform: uppercase;
+}
+.project__langue {
+  /* thụt chữ vào */
+  text-indent: 20px;
+}
+.project__link {
+  padding: 20px;
+  height: 100%;
+  background: linear-gradient(to right, #433e3e, #d07b7b);
+  margin: 0 15px 20px 15px;
+  border-radius: 20px;
+}
+.project__link a {
+  margin-bottom: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+.link__web {
+  width: 350px;
+  height: 100%;
+  background: linear-gradient(to right, #e29494, #0939d6);
+  padding: 10px;
+  border-radius: 20px;
+  color: #fff;
+  line-height: 20px;
+}
+.link__web img {
+  width: 100%;
+  height: 230px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+.content {
+  padding: 5px 0 0 10px;
+  text-indent: 15px;
+  font-size: 15px;
+  color: #ffffffc8;
+}
+a {
+  text-decoration: none;
+}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  color: #000000;
+  z-index: 2;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  /* tsall */
+  transition: all 0.2s linear;
+}
+.slick-arrow:hover {
+  background-color: #1ed9f6dd;
+  color: #fff;
+  width: 55px;
+  height: 55px;
+}
+.slick-prev {
+  /* abscentery */
+  left: 0;
+}
+ion-icon {
+  font-size: 30px;
+}
+.slick-next {
+  right: 0;
+}
+.slick-dots {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 10px;
+}
+.slick-dots li {
+  margin-right: 10px;
+}
+.slick-dots li button {
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  background-color: #e7dbdb;
+  outline: none;
+  transition: all 0.2s linear;
+}
+.slick-dots .slick-active button {
+  background-color: rgba(226, 70, 70, 0.882);
+}
+/* Base styles for the team section */
+#team .member {
+  width: 200px;
+  height: 240px;
+  background: #f6f7f7ac;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px #1d2429ac;
+}
+.member .description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#team {
+  background: linear-gradient(to bottom, pink, #50c0cf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  gap: 30px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+  text-align: center; /* Center text inside each member */
+  margin: 20px;
+}
+#team .description {
+  font-size: 15px;
+  line-height: 20px;
+}
+#team .name {
+  color: pink;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* Base styles for the about section */
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 20px;
+  background: linear-gradient(to bottom, #3399ff, #ccffcc);
+  margin: 20px;
+  border-radius: 20px;
+  line-height: 20px;
+  flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+  max-height: 460px;
+}
+
+#about .box {
+  background-color: #333333;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  flex: 1;
+  min-width: 300px; /* Ensure the box doesn't get too small */
+  max-width: 45%; /* Ensure the box doesn't exceed this width on larger screens */
+  margin: 10px; /* Add margin between boxes */
+}
+
+#about .box .title {
+  font-size: 26px;
+  text-transform: uppercase;
+  text-align: left; /* Align title to the left */
+}
+
+#about .box .description {
+  font-size: 14px;
+  text-indent: 20px;
+  text-align: justify; /* Ensure text is justified to both edges */
+  line-height: 1.6; /* Improve readability with increased line height */
+}
+
+/* Responsive Design */
+/* For devices with a max width of 768px (tablets, landscape phones) */
+@media only screen and (max-width: 768px) {
+  #about {
+    flex-direction: column; /* Stack the boxes vertically */
+    padding: 0 10px; /* Adjust padding */
+    max-height: none; /* Allow the section to expand as needed */
+  }
+
+  #about .box {
+    max-width: 90%; /* Take up more width on smaller screens */
+    min-width: 90%; /* Ensure the box takes full width */
+  }
+
+  #about .box .title {
+    font-size: 22px;
+  }
+
+  #about .box .description {
+    font-size: 13px;
+    text-indent: 15px;
+  }
+}
+
+/* For devices with a max width of 576px (portrait phones) */
+@media only screen and (max-width: 576px) {
+  #about .box {
+    max-width: 100%;
+    min-width: 100%; /* Ensure the box takes full width */
+    margin: 5px 0; /* Reduce margin on smaller screens */
+  }
+
+  #about .box .title {
+    font-size: 20px;
+  }
+
+  #about .box .description {
+    font-size: 12px;
+    text-indent: 10px;
+  }
+}
+
+/* For larger screens (desktops) */
+@media only screen and (min-width: 1200px) {
+  #about .box {
+    max-width: 40%; /* Adjust box width for larger screens */
+    min-width: 300px;
+  }
+
+  #about .box .title {
+    font-size: 28px;
+  }
+
+  #about .box .description {
+    font-size: 16px;
+  }
+}
+
+/* Animations */
+.left-to-right {
+  transform: translateX(-200%);
+  transition: all 0.5s ease-in-out;
+}
+.left-to-right.start {
+  transform: translateX(0);
+}
+.scale {
+  transform: scale(0.5);
+  transition: all 0.3s linear;
+}
+.scale.start {
+  transform: scale(1);
+}
+.right-to-left {
+  transform: translateX(200%);
+  transition: all 0.7s linear;
+}
+.right-to-left.start {
+  transform: translateX(0);
+}
+.zoom {
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+.zoom.start {
+  transform: scale(1);
+}
+
+/* Responsive Design */
+/* For devices with a max width of 768px (tablets, landscape phones) */
+@media only screen and (max-width: 768px) {
+  #team {
+    gap: 20px;
+  }
+
+  #team .member {
+    width: 180px;
+    height: 220px;
+    padding: 15px;
+  }
+
+  #team .description {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #team .name {
+    font-size: 22px;
+  }
+}
+
+/* For devices with a max width of 576px (portrait phones) */
+@media only screen and (max-width: 576px) {
+  #team {
+    flex-direction: column; /* Stack members vertically */
+    align-items: center; /* Center all items */
+  }
+
+  #team .member {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  #team .description {
+    font-size: 13px;
+    line-height: 17px;
+    -webkit-line-clamp: 5;
+  }
+
+  #team .name {
+    font-size: 20px;
+  }
+}
+
+/* For larger screens (desktops) */
+@media only screen and (min-width: 1200px) {
+  #team {
+    gap: 40px;
+  }
+
+  #team .member {
+    width: 250px;
+    height: 280px;
+  }
+
+  #team .description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  #team .name {
+    font-size: 28px;
+  }
+}
