@@ -67,5 +67,5 @@ window.onload = function () {
   setTimeout(function () {
     loadingScreen.style.display = "none"; // Ẩn màn hình loading
     container.style.display = "block"; // Hiển thị nội dung trang
-  }, 1000); // Thời gian delay (2000 ms = 2 giây)
+  }, 2000); // Thời gian delay (2000 ms = 2 giây)
 };

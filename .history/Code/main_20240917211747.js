@@ -60,12 +60,8 @@ function checkAnimation() {
 window.onscroll = checkAnimation;
 
 // loading
+// JavaScript to hide loading screen once page is fully loaded
 window.onload = function () {
   var loadingScreen = document.getElementById("loading");
-  var container = document.querySelector(".container");
-
-  setTimeout(function () {
-    loadingScreen.style.display = "none"; // Ẩn màn hình loading
-    container.style.display = "block"; // Hiển thị nội dung trang
-  }, 1000); // Thời gian delay (2000 ms = 2 giây)
+  loadingScreen.style.display = "none";
 };
